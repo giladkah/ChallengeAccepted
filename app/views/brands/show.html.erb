@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brand.name %>
+</p>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
+
+<!-- LISTINGS -->
+
+<h1>Listing locations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brand.locations.each do |location| %>
+  <tr>
+    <td><%= location.name %></td>
+    <td><%= link_to 'Show', [location.brand, location] %></td>
+    <td><%= link_to 'Edit', edit_brand_location_path(location.brand, location) %></td>
+    <td><%= link_to 'Destroy', [location.brand, location], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Location', new_brand_location_path(params[:id]) %>
+
+<!-- LISTINGS -->

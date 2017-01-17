@@ -1,0 +1,1 @@
+json.partial! "brand_locations/brand_location", brand_location: @brand_location
