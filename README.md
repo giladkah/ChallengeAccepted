@@ -14,6 +14,7 @@ Sellers can CRUD their Locations, Order Types, Menu Items and Order Types. Selle
    - We can also assume that a brand doesn’t have a lot of price levels and we can give 10 columns for example for unused price levels for each menu item. It’ll be easier to use in some ways, but the problem will be to maintain it and to create a migration if the brand wants more than 10 price levels.
    - If we use NoSql like Mongo, we can put everything for a menu item in one document and contain that list of different price levels.
    - UX wise, it’ll be important to show the seller what data is missing once he/she created a new price level. E.g, prompt that “Spicy Reuben” doesn’t have a price for ”Happy Hour”. Also it’ll be essential to always have a regular price - a default, if seller forgot to specify the price level for this menu item
+
 ## Buyer Story
 
 Buyer can order a menu item with a specific location, order type [and day part]
