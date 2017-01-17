@@ -10,10 +10,10 @@ Sellers can CRUD their Locations, Order Types, Menu Items and Order Types. Selle
    - PriceConfiguration is a model that will save the mapping from OrderType and DayType to PriceLevel:
 
 3. There are a few possible choices modeling the relation between price levels and menu items.
-- If we use ActiveRecord and mysql, it means that we have a rigid relation between the two. For example, for each price level we will have many menu items. The problem here is that “Spicy Reuben” will appear both in “Happy Hour” and in “Regular” with different prices. 
-- We can also assume that a brand doesn’t have a lot of price levels and we can give 10 columns for example for unused price levels for each menu item. It’ll be easier to use in some ways, but the problem will be to maintain it and to create a migration if the brand wants more than 10 price levels.
-If we use NoSql like Mongo, we can put everything for a menu item in one document and contain that list of different price levels.
- - UX wise, it’ll be important to show the seller what data is missing once he/she created a new price level. E.g, prompt that “Spicy Reuben” doesn’t have a price for ”Happy Hour”. Also it’ll be essential to always have a regular price - a default, if seller forgot to specify the price level for this menu item
+   - If we use ActiveRecord and mysql, it means that we have a rigid relation between the two. For example, for each price level we will have many menu items. The problem here is that “Spicy Reuben” will appear both in “Happy Hour” and in “Regular” with different prices. 
+   - We can also assume that a brand doesn’t have a lot of price levels and we can give 10 columns for example for unused price levels for each menu item. It’ll be easier to use in some ways, but the problem will be to maintain it and to create a migration if the brand wants more than 10 price levels.
+   - If we use NoSql like Mongo, we can put everything for a menu item in one document and contain that list of different price levels.
+   - UX wise, it’ll be important to show the seller what data is missing once he/she created a new price level. E.g, prompt that “Spicy Reuben” doesn’t have a price for ”Happy Hour”. Also it’ll be essential to always have a regular price - a default, if seller forgot to specify the price level for this menu item
 ## Buyer Story
 
 Buyer can order a menu item with a specific location, order type [and day part]
