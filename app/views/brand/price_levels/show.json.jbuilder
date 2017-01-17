@@ -1,0 +1,1 @@
+json.partial! "brand_price_levels/brand_price_level", brand_price_level: @brand_price_level

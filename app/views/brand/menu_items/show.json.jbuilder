@@ -1,0 +1,1 @@
+json.partial! "brand_menu_items/brand_menu_item", brand_menu_item: @brand_menu_item

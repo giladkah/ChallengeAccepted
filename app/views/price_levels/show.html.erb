@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @price_level.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_brand_price_level_path(@price_level.brand, @price_level) %> |
+<%= link_to 'Back', brand_price_levels_path(@price_level.brand) %>

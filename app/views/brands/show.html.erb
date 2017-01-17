@@ -8,9 +8,9 @@
 <%= link_to 'Edit', edit_brand_path(@brand) %> |
 <%= link_to 'Back', brands_path %>
 
-<!-- LISTINGS -->
+<!-- LOCATIONS -->
 
-<h1>Listing locations</h1>
+<h1>Locations</h1>
 
 <table>
   <tr>
@@ -34,4 +34,84 @@
 
 <%= link_to 'New Location', new_brand_location_path(params[:id]) %>
 
-<!-- LISTINGS -->
+<!-- MENU ITEMS -->
+
+<h1>Menu Items</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brand.menu_items.each do |menu_item| %>
+  <tr>
+    <td><%= menu_item.name %></td>
+    <td><%= menu_item.price %></td>
+    <td><%= link_to 'Show', [menu_item.brand, menu_item] %></td>
+    <td><%= link_to 'Edit', edit_brand_menu_item_path(menu_item.brand, menu_item) %></td>
+    <td><%= link_to 'Destroy', [menu_item.brand, menu_item], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menu item', new_brand_menu_item_path(params[:id]) %>
+
+
+<!-- PRICE LEVELS -->
+
+<h1>Price Levels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brand.price_levels.each do |price_level| %>
+  <tr>
+    <td><%= price_level.name %></td>
+    <td><%= link_to 'Show', [price_level.brand, price_level] %></td>
+    <td><%= link_to 'Edit', edit_brand_price_level_path(price_level.brand, price_level) %></td>
+    <td><%= link_to 'Destroy', [price_level.brand, price_level], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Price level', new_brand_price_level_path(params[:id]) %>
+
+
+<!-- ORDER TYPES -->
+
+<h1>Order Types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brand.order_types.each do |order_type| %>
+  <tr>
+    <td><%= order_type.name %></td>
+    <td><%= link_to 'Show', [order_type.brand, order_type] %></td>
+    <td><%= link_to 'Edit', edit_brand_order_type_path(order_type.brand, order_type) %></td>
+    <td><%= link_to 'Destroy', [order_type.brand, order_type], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order type', new_brand_order_type_path(params[:id]) %>

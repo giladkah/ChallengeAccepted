@@ -1,0 +1,1 @@
+json.array! @brand_order_types, partial: 'brand_order_types/brand_order_type', as: :brand_order_type

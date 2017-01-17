@@ -1,0 +1,1 @@
+json.partial! "brand_order_types/brand_order_type", brand_order_type: @brand_order_type

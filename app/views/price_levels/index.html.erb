@@ -1,0 +1,23 @@
+<h1>Listing price_levels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @price_levels.each do |price_level| %>
+  <tr>
+    <td><%= price_level.name %></td>
+    <td><%= link_to 'Show', [price_level.brand, price_level] %></td>
+    <td><%= link_to 'Edit', edit_brand_price_level_path(price_level.brand, price_level) %></td>
+    <td><%= link_to 'Destroy', [price_level.brand, price_level], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Price level', new_brand_price_level_path(params[:brand_id]) %>

@@ -1,0 +1,1 @@
+json.array! @brand_price_levels, partial: 'brand_price_levels/brand_price_level', as: :brand_price_level

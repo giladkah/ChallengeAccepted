@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   resources :brands do
+    resources :menu_items
+  end
+  resources :brands do
+    resources :price_levels
+  end
+  resources :brands do
+    resources :order_types
+  end
+  resources :brands do
     resources :locations
   end
   resources :widgets
@@ -9,7 +18,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
+  root 'brands#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

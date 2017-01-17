@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @order_type.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_brand_order_type_path(@order_type.brand, @order_type) %> |
+<%= link_to 'Back', brand_order_types_path(@order_type.brand) %>

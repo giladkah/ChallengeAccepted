@@ -1,0 +1,1 @@
+json.array! @brand_menu_items, partial: 'brand_menu_items/brand_menu_item', as: :brand_menu_item
