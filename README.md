@@ -2,7 +2,9 @@
 
 ## Seller story:
 
-Sellers can CRUD their Locations, Order Types, Menu Items and Order Types. Seller can CRUD for a location a day part Seller can CRUD for a location a price level by order type [and day part]
+Sellers can CRUD their Locations, Order Types, Menu Items and Order Types. 
+Seller can CRUD for a location a day part 
+Seller can CRUD for a location a price level by order type [and day part]
 
 1. Brand has one-to-many relations with: Location, Order Type, Menu Item and Order Type
 
