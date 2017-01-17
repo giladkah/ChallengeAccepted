@@ -30,3 +30,7 @@ https://sleepy-brushlands-57841.herokuapp.com/ The site here gives the relations
 ## Validations
 
 The needed validations are for uniqness of input for brands. For each brand uniqness for locations, menu items, order types and price levels. Also, need to validate uniqness of price configuration per order type and day part. Also need validation for day parts that don't interfere with one another
+
+## More
+There is a flow chart and an order UI in open issues
+
