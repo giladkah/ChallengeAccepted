@@ -23,8 +23,8 @@
 <% @brand.locations.each do |location| %>
   <tr>
     <td><%= location.name %></td>
-    <td><%= link_to 'Show', [location.brand, location] %></td>
-    <td><%= link_to 'Edit', edit_brand_location_path(location.brand, location) %></td>
+    <td><%= link_to 'Show', [location.brand, location] %> | </td>
+    <td><%= link_to 'Edit', edit_brand_location_path(location.brand, location) %> | </td>
     <td><%= link_to 'Destroy', [location.brand, location], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -51,8 +51,8 @@
   <tr>
     <td><%= menu_item.name %></td>
     <td><%= menu_item.price %></td>
-    <td><%= link_to 'Show', [menu_item.brand, menu_item] %></td>
-    <td><%= link_to 'Edit', edit_brand_menu_item_path(menu_item.brand, menu_item) %></td>
+    <td><%= link_to 'Show', [menu_item.brand, menu_item] %> | </td>
+    <td><%= link_to 'Edit', edit_brand_menu_item_path(menu_item.brand, menu_item) %> | </td>
     <td><%= link_to 'Destroy', [menu_item.brand, menu_item], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -78,9 +78,9 @@
 <% @brand.price_levels.each do |price_level| %>
   <tr>
     <td><%= price_level.name %></td>
-    <td><%= link_to 'Show', [price_level.brand, price_level] %></td>
-    <td><%= link_to 'Edit', edit_brand_price_level_path(price_level.brand, price_level) %></td>
-    <td><%= link_to 'Destroy', [price_level.brand, price_level], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show ', [price_level.brand, price_level] %> | </td>
+    <td><%= link_to 'Edit ', edit_brand_price_level_path(price_level.brand, price_level) %> | </td>
+    <td><%= link_to 'Destroy ', [price_level.brand, price_level], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -105,8 +105,8 @@
 <% @brand.order_types.each do |order_type| %>
   <tr>
     <td><%= order_type.name %></td>
-    <td><%= link_to 'Show', [order_type.brand, order_type] %></td>
-    <td><%= link_to 'Edit', edit_brand_order_type_path(order_type.brand, order_type) %></td>
+    <td><%= link_to 'Show', [order_type.brand, order_type] %> | </td>
+    <td><%= link_to 'Edit', edit_brand_order_type_path(order_type.brand, order_type) %> | </td>
     <td><%= link_to 'Destroy', [order_type.brand, order_type], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
