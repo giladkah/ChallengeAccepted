@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price_level: MyString
+  price: 1
+  menu_item_id: 
+  order_type_id: 
+  day_part_id: 
+
+two:
+  price_level: MyString
+  price: 1
+  menu_item_id: 
+  order_type_id: 
+  day_part_id: 

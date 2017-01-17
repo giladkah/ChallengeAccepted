@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117043239) do
+ActiveRecord::Schema.define(version: 20170117060649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,31 @@ ActiveRecord::Schema.define(version: 20170117043239) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string   "price_level"
+    t.integer  "price"
+    t.integer  "menu_item_id"
+    t.integer  "order_type_id"
+    t.integer  "day_part_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "orders", ["day_part_id"], name: "index_orders_on_day_part_id", using: :btree
+  add_index "orders", ["menu_item_id"], name: "index_orders_on_menu_item_id", using: :btree
+  add_index "orders", ["order_type_id"], name: "index_orders_on_order_type_id", using: :btree
+
+  create_table "price_configurations", force: :cascade do |t|
+    t.string   "order_type"
+    t.string   "day_part"
+    t.string   "price_level"
+    t.integer  "location_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "price_configurations", ["location_id"], name: "index_price_configurations_on_location_id", using: :btree
+
   create_table "price_levels", force: :cascade do |t|
     t.integer  "brand_id"
     t.string   "name"
@@ -97,5 +122,9 @@ ActiveRecord::Schema.define(version: 20170117043239) do
   add_foreign_key "menu_items", "brands"
   add_foreign_key "messages", "users"
   add_foreign_key "order_types", "brands"
+  add_foreign_key "orders", "day_parts"
+  add_foreign_key "orders", "menu_items"
+  add_foreign_key "orders", "order_types"
+  add_foreign_key "price_configurations", "locations"
   add_foreign_key "price_levels", "brands"
 end
